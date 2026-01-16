@@ -14,6 +14,9 @@ export class EmailValidation{
         if (this.endsWithDot(email)) {
             return false;
         }
+         if (!this.hasTextAfterAt(email)){
+            return false;
+         } 
 
 
         return true;
@@ -36,6 +39,10 @@ export class EmailValidation{
     const domain = email.split("@")[1];
     if (!domain) return true;
     return domain.endsWith(".");
+  }
+    private hasTextAfterAt(email: string): boolean {
+    const atIndex = email.indexOf("@");
+    return atIndex < email.length - 1;
   }
 
 }

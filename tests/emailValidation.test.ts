@@ -27,6 +27,11 @@ describe('emailValidation', ()=>{
             let actual = emailValidation.validate("example@test.com.");
 
             expect (actual).toBe(false);
+        });
+        it("should return no tewt after @",()=>{
+            let actual = emailValidation.validate("example@testcom");
+
+            expect (actual).toBe(false);
         })
 
     })
