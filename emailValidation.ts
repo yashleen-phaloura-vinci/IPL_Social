@@ -17,6 +17,10 @@ export class EmailValidation{
          if (!this.hasTextAfterAt(email)){
             return false;
          } 
+          if (!this.hasTextBeforeAt(email)) {
+            return false;
+          }
+
 
 
         return true;
@@ -43,6 +47,10 @@ export class EmailValidation{
     private hasTextAfterAt(email: string): boolean {
     const atIndex = email.indexOf("@");
     return atIndex < email.length - 1;
+  }
+   private hasTextBeforeAt(email: string): boolean {
+    const atIndex = email.indexOf("@");
+    return atIndex > 0;
   }
 
 }

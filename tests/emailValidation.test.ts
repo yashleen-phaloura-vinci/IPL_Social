@@ -28,12 +28,13 @@ describe('emailValidation', ()=>{
 
             expect (actual).toBe(false);
         });
-        it("should return no tewt after @",()=>{
+        it("should return no text after @",()=>{
             let actual = emailValidation.validate("example@testcom");
 
             expect (actual).toBe(false);
-        })
+        });
+        
 
-    })
+    });
 
-})
+});
