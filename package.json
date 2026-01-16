@@ -1,0 +1,26 @@
+{
+  "name": "ipl_social",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yashleen-phaloura-vinci/IPL_Social.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/yashleen-phaloura-vinci/IPL_Social/issues"
+  },
+  "homepage": "https://github.com/yashleen-phaloura-vinci/IPL_Social#readme",
+  "dependencies": {
+    "jest": "^30.2.0"
+  },
+  "devDependencies": {
+    "@types/jest": "^30.0.0",
+    "ts-jest": "^29.4.6"
+  }
+}
