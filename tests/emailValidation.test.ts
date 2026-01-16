@@ -17,6 +17,11 @@ describe('emailValidation', ()=>{
             let actual = emailValidation.validate("exampletest.com");
 
             expect (actual).toBe(false);
+        });
+        it("should return at least one dot", ()=>{
+            let actual = emailValidation.validate("exampletestcom");
+
+            expect (actual).toBe(false);
         })
 
     })
