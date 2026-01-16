@@ -12,7 +12,13 @@ describe('emailValidation', ()=>{
 
             //Assert
             expect (actual).toBe(true);
+        });
+        it("should return with @",()=>{
+            let actual = emailValidation.validate("exampletest.com");
+
+            expect (actual).toBe(false);
         })
+
     })
 
 })
