@@ -11,7 +11,9 @@ export class EmailValidation{
         if (!this.containsDot(email)){
             return false;
         }
-
+        if (this.endsWithDot(email)) {
+            return false;
+        }
 
 
         return true;
@@ -29,6 +31,11 @@ export class EmailValidation{
             return false;
         } 
         return domain.includes(".");
+  }
+   private endsWithDot(email: string): boolean {
+    const domain = email.split("@")[1];
+    if (!domain) return true;
+    return domain.endsWith(".");
   }
 
 }

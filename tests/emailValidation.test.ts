@@ -22,6 +22,11 @@ describe('emailValidation', ()=>{
             let actual = emailValidation.validate("exampletestcom");
 
             expect (actual).toBe(false);
+        });
+        it("should return without dot at the end",()=>{
+            let actual = emailValidation.validate("example@test.com.");
+
+            expect (actual).toBe(false);
         })
 
     })
